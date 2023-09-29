@@ -1,0 +1,58 @@
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+
+
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    .reservation__login,.navbar {
+        display: none;
+    }
+
+    .menu-nav {
+        display: block;
+    }
+
+    .header-navbar {
+        padding: 20px 10.5px 0;
+    }
+
+    .navbar-item__mobile {
+        list-style: none;
+        transition: linear 0.2s;
+    }
+
+    .navbar-mobile {
+        margin-top: 75px;
+        background-color: #111114;
+    }
+
+    .navbar-item__mobile a{
+        text-decoration: none;
+        padding: 10px 22px;
+        font-size: 2rem;
+        display: block;
+        color: rgba(255, 255, 255, 0.80);
+    }
+
+    .navbar-item__mobile:hover {
+        background-color: #ccc;
+    }
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+
+
+}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    
+}
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+    
+}

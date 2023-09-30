@@ -471,5 +471,69 @@ main {
 }
 
 
+/* Visit */
+.visit {
+    background-color: #111114;
+    padding-bottom: 150px;
+}
+
+.visit__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visit__content h2 {
+    line-height: 1.15625; 
+    text-transform: capitalize;
+    font-size: 6.4rem;
+    color: #fff;
+}
+
+.visit__content p {
+    color: rgba(255, 255, 255, 0.80);
+    line-height: 1.625;
+    max-width: 625px;
+}
+
+.visit__thumbnail {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.visit__thumbnail-item1,.visit__thumbnail-item3{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.visit__thumbnail-item1 img,.visit__thumbnail-item3 img {
+    max-width: 370px;
+    height: 285px;
+    object-fit: cover;
+}
+
+.visit__thumbnail-item2 {
+    flex-grow: 1;
+}
+
+
+.visit__thumbnail-item2 img {
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.visit__thumbnail-owl {
+    display: none;
+}
+
+
+
+
+
 
 

@@ -22,3 +22,15 @@ input,textarea,select,button {
     font-family: inherit;
 }
 
+.mainColor {
+    color: #FB8F2C!important;
+}
+
+.hide {
+    display: none!important;
+}
+
+.appear {
+    display: block!important;
+}
+

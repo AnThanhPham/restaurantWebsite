@@ -22,6 +22,26 @@
     .introduction__thumbnail {
         padding-top: 50px;
     }
+
+    .contact__right{
+        height: 282px;
+    }
+
+    .menu__title h2{
+        font-size: 3.2rem;
+        line-height: 1.29412;
+        max-width: 338px;
+    }
+
+    .menu__title p{
+        font-size: 1.4rem;
+        max-width: 338px;
+        line-height: 1.71429;
+    }
+
+    .menu__list__item-about h4 {
+        max-width: 168px;
+    }
 }
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
@@ -63,6 +83,29 @@
         flex-direction: column;
         gap: 36px;
     }
+
+    .popular__img-item__desc-title h3,.popular__img-item__desc-title span {
+        font-size: 2.4rem!important;
+    }
+
+    .popular__img-item__desc p {
+        font-size: 1.6rem!important;
+    }
+
+    .popular__img-item__desc .order__star {
+        gap: 6px!important;
+    }
+    
+    .menu__navbar ul {
+        flex-wrap: wrap;
+        gap: 0px;
+        row-gap: 26px;
+    }
+
+    .menu__navbar-list {
+        width: 33.33333%;
+        text-align: center;
+    }
 }
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
@@ -70,10 +113,32 @@
     .introduction__thumbnail {
         justify-content: center;
     }
+    .popular__img-item__desc-title h3,.popular__img-item__desc-title span {
+        font-size: 1.8rem;
+    }
+
+    .popular__img-item__desc p {
+        font-size: 1.4rem;
+    }
+
+    .popular__img-item__desc .order__star {
+        gap: 2px;
+    }
 }
 
 /* `xl` applies to large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
+    .menu__navbar-list button {
+        font-size: 2.4rem;
+    }
+    .menu__list__item-about h4 {
+        font-size: 2.2rem;
+    }
+
+    .menu__list__item-price span {
+        font-size: 2.2rem;
+
+    }
 }
 
 /* `xxl` applies to x-large devices (large desktops, less than 1400px) */

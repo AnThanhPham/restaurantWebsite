@@ -527,10 +527,21 @@ main {
     display: none;
 }
 
-/* Container */
+/* reservation */
 .reservation {
     background-color: #111114;
     padding-bottom: 150px;
+    
+}
+
+.reservation__container {
+    position: relative;
+}
+
+.reservation svg {
+    position: absolute;
+    top: -60px;
+    right: -50px;
 }
 
 .reservation__content {
@@ -909,6 +920,104 @@ main {
 
 .blog__content__top {
     margin-bottom: 60px;
+}
+
+/* Letter */
+.letter__left h4 {
+    color: #fff;
+    line-height: 1.25;
+    text-transform: capitalize;
+    font-size: 4rem;
+}
+
+.letter__left p {
+    color: #fff;
+    line-height: 1.625; 
+    max-width: 405px;
+}
+
+.letter__right {
+    display: flex;
+    gap: 231px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #ccc;
+}
+
+.letter__right a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.80);
+    line-height: 1.625;
+}
+
+.banner.letter {
+    align-items: center;
+}
+
+/* Footer */
+
+footer {
+    background-color: #111114;
+    padding: 150px 0 41px 0;
+}
+
+.footer__logo p,.footer__creation p {
+    margin-top: 76px;
+    max-width: 211px;
+    line-height: 1.625;
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.footer__logo .trademark,.footer__creation .trademark{
+    margin-top: 18px;
+    display: flex;
+    gap: 18px;
+}
+
+.footer__logo .trademark img,.footer__creation .trademark img{
+    max-width: 121.6px;
+    height: 36px;
+    object-fit: cover;
+}
+
+footer h5 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+footer ul {
+    margin-top: 24px;
+}
+
+footer ul li {
+    list-style: none;
+    color: rgba(255, 255, 255, 0.80);
+    line-height: 1.625; /* 162.5% */
+    display: block;
+    margin-bottom: 16px;
+}
+
+footer ul li:hover,footer ul li a:hover {
+    color: #FB8F2C;
+}
+
+.footer__contact-info ul li a {
+    color: rgba(255, 255, 255, 0.80);
+    text-decoration: none;
+}
+
+
+.footer__follow-us li a{
+    display: inline-block;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #ccc;
+    color: rgba(255, 255, 255, 0.80);
+    text-decoration: none;
+}
+
+.footer__creation {
+    display: none;
 }
 
 

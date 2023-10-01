@@ -139,6 +139,43 @@
         line-height: 1.71429;
     }
 
+    .letter__left h4 {
+        font-size: 3.2rem;
+        line-height: 1.29412;
+        text-transform: capitalize; 
+    }
+
+    .letter__left p {
+        font-size: 1.4rem;
+        line-height: 1.71429;
+    }
+
+    .banner.letter {
+        gap: 60px;
+    }
+
+    .footer__logo {
+        margin-bottom: 20px;
+    }
+
+    .footer__logo .trademark {
+        display: none;
+    }
+
+    .footer__logo p {
+        display: none;
+    }
+
+    .footer__creation {
+        display: block;
+        margin-top: 34px;
+    }
+
+    .footer__creation p {
+        margin-top: 0;
+    }
+
+
 }
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
@@ -257,6 +294,10 @@
     .reservation__content{
         padding-left: 20px;
     }
+
+    .footer__logo .trademark {
+        flex-direction: row!important;
+    }
 }
 
 /* `xl` applies to large devices (desktops, less than 1200px) */
@@ -279,6 +320,14 @@
 
     .visit__thumbnail-item1 img , .visit__thumbnail-item2 img ,.visit__thumbnail-item3 img {
         width: 100%;
+    }
+
+    .reservation svg {
+        display: none;
+    }
+
+    .footer__logo .trademark {
+        flex-direction: column;
     }
 
 }

@@ -21,6 +21,7 @@
         }
 
         #pagination li{
+            cursor: pointer;
             display: inline-block;
             list-style: none;
             padding: 15px;
@@ -28,15 +29,22 @@
             margin-right: 10px;
         }
 
-        #submitSearch {
-            margin: 0 0 20px 0!important;
-
-        }
-
         .container-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 20px;
+        }
+
+        @media(max-width:575.98px){
+            .container-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            select {
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -267,7 +275,7 @@
                 <div class="container-fluid">
                     <!-- Topbar Search -->
                     <div class="container-top">
-                        <form id="submitSearch" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <form id="submitSearch" class="d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                             <div class="input-group">
                                 <input type="text" class="form-control bg-light border-0 small" placeholder="Search for name..."
                                     aria-label="Search" aria-describedby="basic-addon2" id="search">
@@ -279,7 +287,7 @@
                             </div>
                         </form>
 
-                        <select name="sortByUserName" id="sortByUserName">
+                        <select name="sortByUserName" id="sortByUserName" style="cursor: pointer;">
                             <option value="default">Sort theo username</option>
                             <option value="az">A-Z</option>
                             <option value="za">Z-A</option>

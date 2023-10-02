@@ -10,9 +10,37 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
+     <!-- Link boostraps -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="./assets/css/admin/sb-admin-2.min.css">
+
+    <style>
+        #pagination {
+            text-align: center;
+        }
+
+        #pagination li{
+            display: inline-block;
+            list-style: none;
+            padding: 15px;
+            background-color: #ffffffd3;
+            margin-right: 10px;
+        }
+
+        #submitSearch {
+            margin: 0 0 20px 0!important;
+
+        }
+
+        .container-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
 </head>
-<body id="page-top">
+<body id="page-top" onload="getUser()">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -25,7 +53,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">Admin <sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -35,110 +63,16 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Home</span></a>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div>
-
         </ul>
         <!-- End of Sidebar -->
 
@@ -156,19 +90,6 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -185,7 +106,7 @@
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
                                         <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
+                                            placeholder="Search name..." aria-label="Search"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
@@ -264,8 +185,6 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -276,8 +195,6 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
@@ -288,8 +205,6 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
@@ -300,8 +215,6 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div>
@@ -320,9 +233,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nhóm 7</span>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -354,7 +265,30 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    
+                    <!-- Topbar Search -->
+                    <div class="container-top">
+                        <form id="submitSearch" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for name..."
+                                    aria-label="Search" aria-describedby="basic-addon2" id="search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search fa-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <select name="sortByUserName" id="sortByUserName">
+                            <option value="default">Sort theo username</option>
+                            <option value="az">A-Z</option>
+                            <option value="za">Z-A</option>
+                        </select>
+
+                    </div>
+
+                    <table id="listDish" class="table table-striped"></table>
+                    <ul id="pagination"></ul>
                 </div>
                 <!-- /.container-fluid -->
 
@@ -365,7 +299,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>@Copyright nhóm 7</span>
                     </div>
                 </div>
             </footer>
@@ -405,19 +339,119 @@
     <!-- Bootstrap core JavaScript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/admin/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="./assets/js/admin/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="./assets/js/admin/sb-admin-2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+        let user = []
+        let currentPage = 1
+        let perPage = 2
+        let totalPage;
+        let PageItem = [];
+        async function getUser(){
+            try{
+                let data = await axios.get("https://jsonplaceholder.typicode.com/users")
+                user = data.data
+            }catch(e){
+                console.log(e)
+            }
+            PageItem = user.slice(
+                (currentPage-1) * perPage,
+                (currentPage-1) * perPage + perPage
+            )
+            renderUser(PageItem)
+            totalPage = Math.ceil(user.length / perPage)
+            renderPage(totalPage)
+        }
+        
+        function renderPage(totalPage){
+            let pageNumber = document.querySelector("#pagination")
+            let tmp=``;
+            for(let i=1;i<=totalPage;i++){
+                tmp+=`<li onclick = renderPerPage(${i})>${i}</li>`
+            }
+            pageNumber.innerHTML = tmp;
+        }
 
-    <!-- Page level plugins -->
-    <script src="./assets/js/admin/Chart.min.js"></script>
+        function renderPerPage(number){
+            currentPage = number;
+            PageItem = user.slice(
+                (currentPage-1) * perPage,
+                (currentPage-1) * perPage + perPage
+            )
+            renderUser(PageItem)
+        }
+        
 
-    <!-- Page level custom scripts -->
-    <script src="./assets/js/admin/chart-area-demo.js"></script>
-    <script src="./assets/js/admin/chart-pie-demo.js"></script>
+        function renderUser(array){
+            let tmp = `<tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+            </tr>`
+            array.map(element => {
+                tmp+= `<tr>
+                    <td>${element.id}</td>
+                    <td>${element.name}</td>
+                    <td>${element.username}</td>
+                    <td>${element.email}</td>
+                </tr>`
+            })
+            document.querySelector("table").innerHTML = tmp;
+        }
+
+        function sortUserName(){
+            let sortByUserName = document.querySelector("#sortByUserName").value
+            if(sortByUserName=="az"){
+                user.sort((a,b) =>{
+                    return a.username.toUpperCase().localeCompare(b.username.toUpperCase())
+                })
+            }else if(sortByUserName == "za"){
+                user.sort((a,b) =>{
+                    return b.username.toUpperCase().localeCompare(a.username.toUpperCase())
+                })
+            }else {
+                user.sort((a,b)=>{
+                    return a.id - b.id;
+                })
+            }
+        }
+
+
+        document.querySelector("#search").oninput = function(){
+            let valueSearch = document.querySelector("#search").value
+            if(valueSearch==""){
+                sortUserName()
+                PageItem = user.slice(
+                    (currentPage-1) * perPage,
+                    (currentPage-1) * perPage + perPage
+                )
+                renderUser(PageItem)
+            }else {
+                sortUserName()
+                PageItem = user.filter(element=>{
+                    return element.name.toUpperCase().includes(valueSearch.toUpperCase())
+                })
+                renderUser(PageItem)
+            }
+        }
+        document.querySelector("#sortByUserName").onchange = function(){
+            sortUserName()
+            PageItem = user.slice(
+                    (currentPage-1) * perPage,
+                    (currentPage-1) * perPage + perPage
+                )
+            renderUser(PageItem)
+        }
+    </script>
+    
 
 </body>
 </html>

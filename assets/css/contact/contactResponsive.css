@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .introduction__content__title {
@@ -542,7 +541,6 @@
     margin-left: 0px;
   }
 }
-=======
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .introduction__content__title {
@@ -1086,4 +1084,3 @@
     margin-left: 0px;
   }
 }
->>>>>>> 466304f0f9dac6ac54ef83f3ef6c2852e1c3340b

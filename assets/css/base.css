@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     box-sizing: border-box;
 }
@@ -35,3 +36,49 @@ input,textarea,select,button {
     display: block!important;
 }
 
+=======
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Libre Bodoni", serif;
+  font-weight: 500;
+}
+
+input,
+textarea,
+select,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.mainColor {
+  color: #fb8f2c !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.appear {
+  display: block !important;
+}
+>>>>>>> 466304f0f9dac6ac54ef83f3ef6c2852e1c3340b

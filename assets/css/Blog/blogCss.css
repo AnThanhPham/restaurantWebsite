@@ -331,6 +331,15 @@ a.content-new-rm:hover {
     transition: background-color 0.3s, border-radius 0.3s;
 }
 
+ul.page-number-list-container {
+    color: #fff;
+}
+
+.page-number-link {
+    cursor: pointer;
+    padding: 7px;
+}
+
 div#prevSvgBtn {
     width: 30px;
 }

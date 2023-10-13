@@ -276,6 +276,11 @@ main {
     border-bottom: 1px solid #FB8F2C;
     padding-bottom: 3px;
     text-decoration: none;
+    transition: linear 0.3s;
+}
+
+.popular__img-item__desc .order__link:hover {
+    color: #FB8F2C;
 }
 
 .popular__img-item__desc .order__star{
@@ -916,6 +921,11 @@ main {
     border-bottom: 1px solid #FB8F2C;
     text-decoration: none;
     color: #fff;
+    transition: ease-in 0.3s;
+}
+
+.blog__content-desc a:hover {
+    color: #FB8F2C;
 }
 
 .blog__content__top {
@@ -996,6 +1006,12 @@ footer ul li {
     line-height: 1.625; /* 162.5% */
     display: block;
     margin-bottom: 16px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: linear 0.3s;
 }
 
 footer ul li:hover,footer ul li a:hover {

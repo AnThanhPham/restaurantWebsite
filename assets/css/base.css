@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+*::selection {
+    background-color: #FB8F2C;
+}
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;

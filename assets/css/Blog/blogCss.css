@@ -325,7 +325,7 @@ a.content-new-rm:hover {
 }
 
 .page-number-list-container .page-number-link.active,
-.page-number-list-container-sm .page-number-link.active {
+.page-number-list-container-sm .page-number-link-sm.active {
     background-color: #FB8F2C;
     border-radius: 10px;
     transition: background-color 0.3s, border-radius 0.3s;
@@ -335,7 +335,16 @@ ul.page-number-list-container {
     color: #fff;
 }
 
+ul.page-number-list-container-sm {
+    color: #fff;
+}
+
 .page-number-link {
+    cursor: pointer;
+    padding: 7px;
+}
+
+.page-number-link-sm {
     cursor: pointer;
     padding: 7px;
 }

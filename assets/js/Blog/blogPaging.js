@@ -30,9 +30,11 @@ function numberPage(number) {
     selectedPage.classList.add('active');
 
     currentPage = number;
-
 }
 
+// function revealPage(number) {
+    
+// }
 
 
 function prePage() {
@@ -97,5 +99,81 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Small screen page 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const prevPageBtn = document.getElementById('prevPageBtn');
+    const prevSvgBtn = document.getElementById('prevSvgBtn');
 
+    prevPageBtn.addEventListener('click', function () {
+        changePage('prev');
+    });
+
+    prevSvgBtn.addEventListener('click', function () {
+        changePage('prev');
+    });
+
+    const nextPageBtn = document.getElementById('nextPageBtn');
+    const nextSvgBtn = document.getElementById('nextSvgBtn');
+
+    nextPageBtn.addEventListener('click', function () {
+        changePage('next');
+    });
+
+    nextSvgBtn.addEventListener('click', function () {
+        changePage('next');
+    });
+
+    function changePage(direction) {
+        const activePage = document.querySelector('.page-number-link-sm.active');
+        let targetPage;
+
+        if (direction === 'prev') {
+            targetPage = activePage.previousElementSibling;
+        } else {
+            targetPage = activePage.nextElementSibling;
+        }
+
+        if (targetPage) {
+            activePage.classList.remove('active');
+            targetPage.classList.add('active');
+        } else {
+            const newPage = direction === 'prev' ? document.querySelector('.page-number-link-sm:last-child') : document.querySelector('.page-number-link-sm:first-child');
+            activePage.classList.remove('active');
+            newPage.classList.add('active');
+        }
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const pageList = document.getElementById('pageList');
+    const pageListSm = document.getElementById('pageListSm');
+
+    const pageLinks = pageList.querySelectorAll('.page-number-link');
+    const pageLinksSm = pageListSm.querySelectorAll('.page-number-link-sm');
+
+    pageLinks.forEach(function (pageLink) {
+        pageLink.addEventListener('click', function () {
+            const pageNumber = pageLink.getAttribute('value');
+
+            // Bỏ lớp 'active' ở số trang hiện tại
+            const activePage = document.querySelector('.page-number-link.active');
+            activePage.classList.remove('active');
+
+            // Thêm lớp 'active' cho số trang được chọn
+            pageLink.classList.add('active');
+        });
+    });
+
+    // Small screen 
+    pageLinksSm.forEach(function (pageLink) {
+        pageLink.addEventListener('click', function () {
+            const pageNumber = pageLink.getAttribute('value');
+
+            const activePageSm = document.querySelector('.page-number-link-sm.active');
+            activePageSm.classList.remove('active');
+
+            pageLink.classList.add('active');
+        });
+    });
+});

@@ -47,11 +47,11 @@
                         </svg>
                     </div>
                     <ul class="navbar">
-                        <li class="navbar-item"><a href="#home">Home</a></li>
-                        <li class="navbar-item"><a href="#menu">Menu</a></li>
-                        <li class="navbar-item"><a href="#blog">Blog</a></li>
-                        <li class="navbar-item"><a href="#pages">Pages</a></li>
-                        <li class="navbar-item"><a href="#contact">Contact</a></li>
+                        <li class="navbar-item"><a href="index.html">Home</a></li>
+                        <li class="navbar-item"><a href="menu.html">Menu</a></li>
+                        <li class="navbar-item"><a href="blog.html">Blog</a></li>
+                        <li class="navbar-item"><a href="page.html">Pages</a></li>
+                        <li class="navbar-item"><a href="contact.html">Contact</a></li>
                     </ul>
                     <div class="logo">
                         <a href="index.html">
@@ -68,12 +68,12 @@
                 </div>
             </div>
             <ul class="navbar-mobile" id="navbar-mobile">
-                <li class="navbar-item__mobile"><a href="#">Home</a></li>
-                <li class="navbar-item__mobile"><a href="#">Menu</a></li>
-                <li class="navbar-item__mobile"><a href="#">Blog</a></li>
-                <li class="navbar-item__mobile"><a href="#">Pages</a></li>
-                <li class="navbar-item__mobile"><a href="#">Contact</a></li>
-                <li class="navbar-item__mobile"><a href="#">Login</a></li>
+                <li class="navbar-item__mobile"><a href="index.html">Home</a></li>
+                <li class="navbar-item__mobile"><a href="menu.html">Menu</a></li>
+                <li class="navbar-item__mobile"><a href="blog.html">Blog</a></li>
+                <li class="navbar-item__mobile"><a href="page.html">Pages</a></li>
+                <li class="navbar-item__mobile"><a href="contact.html">Contact</a></li>
+                <li class="navbar-item__mobile"><a href="login.html">Login</a></li>
             </ul>
         </header>
 
@@ -1421,30 +1421,14 @@
                                         <li class="page-number-link" value="7" id="page7" onclick="numberPage(7)">7</li>
                                     </ul>
 
-                                    <script>
-                                        document.addEventListener('DOMContentLoaded', function () {
-                                            const pageList = document.getElementById('pageList');
-                                            const pageLinks = pageList.querySelectorAll('.page-number-link');
-                                        
-                                            pageLinks.forEach(function (pageLink) {
-                                                pageLink.addEventListener('click', function () {
-                                                    const pageNumber = pageLink.getAttribute('value');
-                                        
-                                                    // Bỏ lớp 'active' ở số trang hiện tại
-                                                    const activePage = document.querySelector('.page-number-link.active');
-                                                    activePage.classList.remove('active');
-                                        
-                                                    // Thêm lớp 'active' cho số trang được chọn
-                                                    pageLink.classList.add('active');
-                                                });
-                                            });
-                                        });
-                                    </script>
-
-                                    <ul class="page-number-list-container-sm">
-                                        <li class="page-number-link active" value="1"><a href="#">1</a></li>
-                                        <li class="page-number-link" value="2"><a href="#">2</a></li>
-                                        <li class="page-number-link" value="3"><a href="#">3</a></li>
+                                    <ul class="page-number-list-container-sm" id="pageListSm">
+                                        <li class="page-number-link-sm active" value="1" id="page1" onclick="numberPage(1)">1</li>
+                                        <li class="page-number-link-sm" value="2" id="page2" onclick="numberPage(2)">2</li>
+                                        <li class="page-number-link-sm" value="3" id="page3" onclick="numberPage(3)">3</li>
+                                        <li class="page-number-link-sm" value="4" id="page4" onclick="numberPage(4)">4</li>
+                                        <li class="page-number-link-sm" value="5" id="page5" onclick="numberPage(5)">5</li>
+                                        <li class="page-number-link-sm" value="6" id="page6" onclick="numberPage(6)">6</li>
+                                        <li class="page-number-link-sm" value="6" id="page6" onclick="numberPage(7)">7</li>
                                     </ul>
                                 </div>
                             </div>

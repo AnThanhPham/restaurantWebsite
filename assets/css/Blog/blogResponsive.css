@@ -159,7 +159,6 @@
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
-    
 }
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
@@ -209,6 +208,10 @@
         line-height: 1.625; /* 162.5% */
     }
     
+    .page-number-num {
+        margin-left: 40px;
+    }
+
     .page-number-list-container-sm li > a:hover
     {
         width: 28px;

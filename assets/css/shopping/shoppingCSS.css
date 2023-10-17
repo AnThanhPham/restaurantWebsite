@@ -205,3 +205,41 @@ footer {
     display: none;
   }
   
+
+/* Search space */
+
+.search-space {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+
+#search-box {
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+#search-box #search-text {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  width: 0;
+  padding: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+#search-box:hover #search-text, #search-box #search-text:valid {
+  width: 300px;
+  padding: 10px 0 10px 15px;
+}
+
+#search-box #search-btn {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  padding: 15px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}

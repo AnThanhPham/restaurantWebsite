@@ -123,7 +123,17 @@
               <li class="control-button"><button type="Stater" onclick="filterProduct(this)">Stater</button></li>
               </ul>
           </div>
-          <div class="row">
+
+          <div class="search-and-cart">
+            <div class="search-space">
+              <form action="" id="search-box">
+                <input type="text" id="search-text" placeholder="What u wanna eat ?" required>
+                <button id="search-btn" onclick="searchProducts()"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+            </div>
+          </div>
+
+          <div class="row" id="productList">
           <div class='col-2'>
             <div class='card'>
               <img src='./assets/img/shopping/Beefsteak.jpg' class='card-img-top' alt='' type='Dinner'>

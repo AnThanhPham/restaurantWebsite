@@ -22,6 +22,7 @@
     <!-- Reset css -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
 
+  
     <!-- Link fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,15 +51,12 @@
       referrerpolicy="no-referrer" />
     <!-- Link css -->
     <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-
-    <!-- contact-->
-    <link rel="stylesheet" href="./assets/css/contact/contactStyle.css" />
-    <link rel="stylesheet" href="./assets/css/contact/contactResponsive.css" />
+    <link rel="stylesheet" href="./assets/css/shopping/cartCSS.css" />
+    <link rel="stylesheet" href="./assets/css/shopping/cartResponse.css"/>
   </head>
-  <body>
-    <!-- Header -->
+
+  <body onload="cartLoadPage_Cart()">
+    <!-- Header       --> 
     <header>
       <div class="container">
         <div class="header-navbar">
@@ -114,58 +112,32 @@
     </header>
 
     <main>
-      <section class="main">
-        <div class="container">
-          <div class="row gx-5">
-            <div class="col-sm-12 col-md-7 col-lg-6">
-              <div class="div-left">
-                <h1>Get In Touch With Starbelly</h1>
-                <p>
-                  Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-                  Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
-                  eleifend tellus. Aenean leo ligula, porttitor eu.
-                </p>
-                <div class="contact">
-                  <div class="img-first">
-                    <img src="assets/img/contact/Location.png" />
-                    <p>Silk St, Barbican, London EC2Y 8DS, UK</p>
-                  </div>
-                  <div class="img-second">
-                    <img src="./assets/img/contact/Message.png" />
-                    <p>hellouihut@gmail.com<br />gmail1234@gmail.com</p>
-                  </div>
-                  <div class="img-third">
-                    <img src="./assets/img/contact/Call.png" />
-                    <p>+00-0000-00000<br />+01-0000-00000</p>
-                  </div>
+        <section class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 my-5">
+                        <div class="products-cart">
+                          <div>
+                            <ul class="header-card">
+                            <li class="col-3">Name</li>
+                            <li class="col-2">Image</li>
+                            <li class="col-2">Price</li>
+                            <li class="col-2">Quantily</li>
+                            <li class="col-2">Total</li>
+                            <li class="col-1">Delete</li>
+                            </ul>
+                        </div>
+                          <div class="products-cart-body" id ="products-cart-body"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <h4>TOTAL: $<span id='total-money'>0</span></h4>
+                    </div>
                 </div>
-              </div>
             </div>
-
-            <div class="col-sm-12 col-md-5 col-lg-6">
-              <div class="div-right">
-                <form action="">
-                  <div>
-                    <p>Your name *</p>
-                    <input class="name" type="text" />
-                  </div>
-                  <div>
-                    <p>Email address *</p>
-                    <input class="email" type="text" />
-                  </div>
-                  <div>
-                    <p>Write review *</p>
-                    <textarea></textarea>
-                  </div>
-                  <button type="submit">Submit</button>
-                </form>
-              </div>
-            </div>
-          </div>
-          <img src="./assets/img/contact/image 92.png" class="img-location" />
-        </div>
-      </section>
+        </section>
     </main>
+
 
     <footer id="contact">
       <div class="container overflow-hidden">
@@ -300,8 +272,8 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"></script>
-    <script src="./assets/js/Contact/contact.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/Shopping/shopping.js"></script>
+    <!-- <script src="./assets/js/main.js"></script> -->
     <script>
       $(".owl-carousel").owlCarousel({
         loop: true,
@@ -321,3 +293,5 @@
     </script>
   </body>
 </html>
+
+

@@ -93,7 +93,7 @@ var time = setInterval(() => {
           clearInterval(time);
           document.querySelector("button").style.backgroundColor = "#fb8f2c";
           document.querySelector("#button").addEventListener("click", () => {
-            window.open("index.html");
+            window.open("shopping.html");
           });
         }
       }

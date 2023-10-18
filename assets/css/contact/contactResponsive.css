@@ -179,6 +179,7 @@
   .footer__creation p {
     margin-top: 0;
   }
+  /*main*/
   .main {
     width: 100%;
     flex-direction: column;
@@ -189,6 +190,7 @@
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    height: 450px;
   }
   .img-location {
     width: 100%;
@@ -196,7 +198,7 @@
   }
   .div-right {
     width: 100%;
-    margin: 170px 20px 0 30px;
+    margin: 70px 20px 0 30px;
   }
   .div-right input,
   .div-right textarea {
@@ -209,11 +211,11 @@
     margin-bottom: 50px;
   }
   .contact .img-first img {
-    top: 30px;
+    top: 40px;
     left: 20px;
   }
   .contact .img-first {
-    top: 30px;
+    top: 40px;
     left: 20px;
   }
   .contact .img-second img {
@@ -334,6 +336,7 @@
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+        height: 450px;
   }
   .img-location {
     width: 100%;
@@ -341,7 +344,7 @@
   }
   .div-right {
     width: 100%;
-    margin: 170px 10px 0 10px;
+    margin: 70px 10px 0 10px;
   }
   .div-right input,
   .div-right textarea {
@@ -505,19 +508,20 @@
     margin-bottom: 50px;
   }
   .contact .img-first img {
-    top: 30px;
+    top: 55px;
     left: 20px;
+    position: relative;
   }
   .contact .img-first {
     top: 30px;
     left: 20px;
   }
   .contact .img-second img {
-    top: 115px;
+    top: 135px;
     left: 20px;
   }
   .contact .img-third img {
-    top: 200px;
+    top: 220px;
     left: 20px;
   }
 }

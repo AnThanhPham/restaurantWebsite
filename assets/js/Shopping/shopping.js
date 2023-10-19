@@ -160,7 +160,6 @@ function cartLoadPage(){
 
 function cartLoadPage_Cart(){
     renderProductsCart();
-   // sumPrice()
 }
 
 //search

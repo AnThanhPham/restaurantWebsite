@@ -347,6 +347,10 @@
   .control{
     text-align: center;
   }
+  .search-shopping{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* `xl` applies to large devices (desktops, less than 1200px) */

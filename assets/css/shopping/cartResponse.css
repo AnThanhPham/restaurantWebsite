@@ -118,6 +118,25 @@
       font-size: 5rem;
       line-height: 1;
     }
+    /*-main*/
+    .cart-ul img{
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+    }
+    .cart-ul{
+      font: 200 10px/15px 'Libre Bodoni', serif;
+    }
+
+    .products-cart .header-card{
+      padding-bottom: 20px;
+      font: 300 10px/15px 'Libre Bodoni', serif;
+    }
+    .cart-quantity{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
   }
   
   /* `md` applies to small devices (landscape phones, less than 768px) */
@@ -155,7 +174,25 @@
     .navbar-item__mobile:hover {
       background-color: #ccc;
     }
+    /*-main*/
+    .cart-ul img{
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+    }
+    .cart-ul{
+      font: 200 10px/15px 'Libre Bodoni', serif;
+    }
 
+    .products-cart .header-card{
+      padding-bottom: 20px;
+      font: 300 10px/15px 'Libre Bodoni', serif;
+    }
+    .cart-quantity{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
   }
   
   /* `lg` applies to medium devices (tablets, less than 992px) */

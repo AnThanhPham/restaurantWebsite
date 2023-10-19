@@ -86,19 +86,19 @@ function renderProductsCart(){
     productInCart.map((value,index)=>{
         data += `
         <ul class="cart-ul">
-            <li class="col-3">${value.name}</li>
-            <li class="col-2">
-                <img src='${value.src}' width='100' alt=''>
+            <li class="col-3 col-sm-3 col-md-3">${value.name}</li>
+            <li class="col-2 col-sm-2 col-md-2 text-center">
+                <img src='${value.src}' width='100' alt='' >
             </li>
-            <li class="col-2">$ ${value.price}</li>
-            <li class="col-2">
+            <li class="col-2 col-sm-2 col-md-2 text-center">$ ${value.price}</li>
+            <li class="col-1 col-sm-1 col-md-2 cart-quantity text-center">
                 <button onclick ='plusQuantity(${index})' class='btn btn-secondary'>+</button>
                 <span class='mx2'>${value.quantity}</span>
                 <button onclick ='minusQuantity(${index},${value.quantity})' class='btn btn-secondary'>-</button>
             </li>
-            <li class="col-2">$ ${value.quantity * value.price}</li>
-            <li class="col-1">
-                <button onclick ='deleteCart(${index})'class="btn btn-danger">Delete</button>
+            <li class="col-2 col-sm-2 col-md-2 cart-total text-center">$ ${value.quantity * value.price}</li>
+            <li class="col-2 col-sm-2 col-md-1">
+                <button onclick ='deleteCart(${index})'class="btn btn-danger delete">Delete</button>
             </li>
         </ul>
         `

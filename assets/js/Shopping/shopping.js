@@ -104,6 +104,7 @@ function renderProductsCart(){
         `
     })
     document.getElementById('products-cart-body').innerHTML=data
+    sumPrice()
 }
 
 // lưu vào trình duyệt
@@ -159,7 +160,6 @@ function cartLoadPage(){
 
 function cartLoadPage_Cart(){
     renderProductsCart();
-    sumPrice()
 }
 
 //search

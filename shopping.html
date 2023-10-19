@@ -73,11 +73,11 @@
             </svg>
           </div>
           <ul class="navbar">
-            <li class="navbar-item"><a href="#home">Home</a></li>
-            <li class="navbar-item"><a href="#menu">Menu</a></li>
-            <li class="navbar-item"><a href="#blog">Blog</a></li>
-            <li class="navbar-item"><a href="#pages">Pages</a></li>
-            <li class="navbar-item"><a href="#contact">Contact</a></li>
+            <li class="navbar-item"><a href="index.html">Home</a></li>
+            <li class="navbar-item"><a href="menu.html">Menu</a></li>
+            <li class="navbar-item"><a href="blog.html">Blog</a></li>
+            <li class="navbar-item"><a href="page.html">Pages</a></li>
+            <li class="navbar-item"><a href="contact.html">Contact</a></li>
           </ul>
           <div class="logo">
             <a href="index.html">
@@ -97,26 +97,41 @@
           </div>
           <div class="table-reservation">
             <a href="login.html" class="table-reservation__login">Login</a>
-            <a href="#" class="table-reservation__reserve">Table Reservation</a>
+            <a href="shopping.html" class="table-reservation__reserve">Table Reservation</a>
           </div>
         </div>
       </div>
       <ul class="navbar-mobile" id="navbar-mobile">
-        <li class="navbar-item__mobile"><a href="#home">Home</a></li>
-        <li class="navbar-item__mobile"><a href="#menu">Menu</a></li>
-        <li class="navbar-item__mobile"><a href="#blog">Blog</a></li>
-        <li class="navbar-item__mobile"><a href="#pages">Pages</a></li>
-        <li class="navbar-item__mobile"><a href="#contact">Contact</a></li>
+        <li class="navbar-item__mobile"><a href="index.html">Home</a></li>
+        <li class="navbar-item__mobile"><a href="menu.html">Menu</a></li>
+        <li class="navbar-item__mobile"><a href="blog.html">Blog</a></li>
+        <li class="navbar-item__mobile"><a href="page.html">Pages</a></li>
+        <li class="navbar-item__mobile"><a href="contact.html">Contact</a></li>
         <li class="navbar-item__mobile"><a href="login.html">Login</a></li>
       </ul>
     </header>
 
     <main >
       <section class="main">
-        <div class="container">
+         <div class="container">
+          <div class="row">
+            <p class="col-12 col-sm-12 col-lg-6 all-menu">Your Shopping Cart</p>
+            <div class="col-12 col-sm-12 col-lg-6 search-shopping">
+              <div class="search-space">
+              <input type="text" id="myInput">
+              <button class="search-btn">
+                <i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #ffffff;"></i>
+              </button>
+              </div>
+              <div class="card-space d-flex">
+                <a href = "cart.html" target="_blank"><img src="./assets/img/shopping/shopping.png"></a>
+                <span id="quantity">0</span>
+              </div>
+            </div>
+        </div>
           <div class="control">
               <ul>
-              <li class="control-button"><button type="All" class="active" onclick="filterProduct(this)">All</button></li>
+              <li  class="control-button"><button type="All" class="active" onclick="filterProduct(this)">All</button></li>
               <li class="control-button"><button type="Breakfast" onclick="filterProduct(this)">Breakfast</button></li>
               <li class="control-button"><button type="Lunch" onclick="filterProduct(this)">Lunch</button></li>
               <li class="control-button"><button type="Dinner" onclick="filterProduct(this)">Dinner</button></li>
@@ -136,288 +151,288 @@
           <div class="row" id="productList">
           <div class='col-2'>
             <div class='card'>
-              <img src='./assets/img/shopping/Beefsteak.jpg' class='card-img-top' alt='' type='Dinner'>
+              <img src='./assets/img/shopping/Beefsteak.jpg' class='card-img-top' id ="1" alt='' type='Dinner' >
                   <div class='card-body'>
                       <h5 class='card-title'>Beefsteak</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 19</p>
-                          <button onclick='addToCart(1)' class='btn btn-primary'>Add to cart</button>
+                          <p>$<p class= 'card-text'>19</p></p>
+                          <button onclick='addToCart("1")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Breakfast Sandwiches (2).png' class='card-img-top' alt='' type='Dinner'>
+              <img src='./assets/img/shopping/Breakfast Sandwiches (2).png' class='card-img-top' id ="2" alt='' type='Dinner'>
                   <div class='card-body'>
                       <h5 class='card-title'>Breakfast Sandwiches</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 70</p>
-                          <button onclick='addToCart(2)' class='btn btn-primary'>Add to cart</button>
+                          <p>$ <p class= 'card-text'>70</p></p>
+                          <button onclick='addToCart("2")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Breakfast Sandwiches.jpg' class='card-img-top' alt='' type='Stater'>
+              <img src='./assets/img/shopping/Breakfast Sandwiches.jpg' class='card-img-top' id ="3" alt='' type='Stater'>
                   <div class='card-body'>
                       <h5 class='card-title'>Breakfast Sandwiches</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 10</p>
-                          <button onclick='addToCart(3)' class='btn btn-primary'>Add to cart</button>
+                          <p>$<p class= 'card-text'>10</p></p>
+                          <button onclick='addToCart("3")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Breakfast Sandwiches.png' class='card-img-top' alt='' type='Breakfast'>
+              <img src='./assets/img/shopping/Breakfast Sandwiches.png' class='card-img-top' id ="4" alt='' type='Breakfast'>
                   <div class='card-body'>
                       <h5 class='card-title'>Breakfast Sandwiches</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 24</p>
-                          <button onclick='addToCart(4)' class='btn btn-primary'>Add to cart</button>
+                          <p>$<p class= 'card-text'>24</p></p>
+                          <button onclick='addToCart("4")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Cascades.png' class='card-img-top' alt='' type='Dinner'>
+              <img src='./assets/img/shopping/Cascades.png' class='card-img-top' id ="5" alt='' type='Dinner'>
                   <div class='card-body'>
                       <h5 class='card-title'>Cascades</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 44</p>
-                          <button onclick='addToCart(5)' class='btn btn-primary'>Add to cart</button>
+                          <p>$<p class= 'card-text'>44</p></p>
+                          <button onclick='addToCart("5")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Chicken And Haloumi Skewers.jpg' class='card-img-top' alt='' type='Lunch'>
+              <img src='./assets/img/shopping/Chicken And Haloumi Skewers.jpg' class='card-img-top' id ="6" alt='' type='Lunch'>
                   <div class='card-body'>
                       <h5 class='card-title'>Chicken And Haloumi Skewers</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 40</p>
-                          <button onclick='addToCart(6)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>40</p> </p>
+                          <button onclick='addToCart("6")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Clever Carb.png' class='card-img-top' alt='' type='Dinner'>
+              <img src='./assets/img/shopping/Clever Carb.png' class='card-img-top' id ="7" alt='' type='Dinner'>
                   <div class='card-body'>
                       <h5 class='card-title'>Clever Carb</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 55</p>
-                          <button onclick='addToCart(7)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>55</p></p>
+                          <button onclick='addToCart("7")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Coconut Pancakes.jpg' class='card-img-top' alt='' type='Breakfast'>
+              <img src='./assets/img/shopping/Coconut Pancakes.jpg' class='card-img-top'id ="8"  alt='' type='Breakfast'>
                   <div class='card-body'>
                       <h5 class='card-title'>Coconut Pancakes</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 22</p>
-                          <button onclick='addToCart(8)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>22</p> </p>
+                          <button onclick='addToCart("8")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Crumbed Fish Balls.jpg' class='card-img-top' alt='' type='Lunch'>
+              <img src='./assets/img/shopping/Crumbed Fish Balls.jpg' class='card-img-top' id ="9" alt='' type='Lunch'>
                   <div class='card-body'>
                       <h5 class='card-title'>Crumbed Fish Balls</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 50</p>
-                          <button onclick='addToCart(9)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>50</p> </p>
+                          <button onclick='addToCart("9")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Fermented Pork Roll.jpg' class='card-img-top' alt='' type='Stater'>
+              <img src='./assets/img/shopping/Fermented Pork Roll.jpg' class='card-img-top' id ="10" alt='' type='Stater'>
                   <div class='card-body'>
                       <h5 class='card-title'>Fermented Pork Roll</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 5</p>
-                          <button onclick='addToCart(10)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>5</p> </p>
+                          <button onclick='addToCart("10")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Foie Gras.jpg' class='card-img-top' alt='' type='Dinner'>
+              <img src='./assets/img/shopping/Foie Gras.jpg' class='card-img-top' id ="11" alt='' type='Dinner'>
                   <div class='card-body'>
                       <h5 class='card-title'>Foie Gras</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 59</p>
-                          <button onclick='addToCart(11)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>59</p> </p>
+                          <button onclick='addToCart("11")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Glass Noodle Spring Rolls.jpg' class='card-img-top' alt='' type='Lunch'>
+              <img src='./assets/img/shopping/Glass Noodle Spring Rolls.jpg' class='card-img-top' id ="12" alt='' type='Lunch'>
                   <div class='card-body'>
                       <h5 class='card-title'>Glass Noodle Spring Rolls</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 39</p>
-                          <button onclick='addToCart(12)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>39</p> </p>
+                          <button onclick='addToCart("12")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Memphis Banana Bread.jpg' class='card-img-top' alt='' type='Breakfast'>
+              <img src='./assets/img/shopping/Memphis Banana Bread.jpg' class='card-img-top'id ="13" alt='' type='Breakfast'>
                   <div class='card-body'>
                       <h5 class='card-title'>Memphis Banana Bread</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 26</p>
-                          <button onclick='addToCart(13)' class='btn btn-primary'>Add to cart</button>
+                      <p><p class= 'card-text'>26</p> </p>
+                          <button onclick='addToCart("13")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Miso Croque Madame.png' class='card-img-top' alt='' type='Breakfast'>
+              <img src='./assets/img/shopping/Miso Croque Madame.png' class='card-img-top' id ="14" alt='' type='Breakfast'>
                   <div class='card-body'>
                       <h5 class='card-title'>Miso Croque Madame</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 29</p>
-                          <button onclick='addToCart(14)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>29</p> </p>
+                          <button onclick='addToCart("14")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Mixed Vegetables.png' class='card-img-top' alt='' type='Lunch'>
+              <img src='./assets/img/shopping/Mixed Vegetables.png' class='card-img-top' id ="15" alt='' type='Lunch'>
                   <div class='card-body'>
                       <h5 class='card-title'>Mixed Vegetables</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 29</p>
-                          <button onclick='addToCart(15)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>29</p> </p>
+                          <button onclick='addToCart("15")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Oysters.jpg' class='card-img-top' alt='' type='Dinner'>
+              <img src='./assets/img/shopping/Oysters.jpg' class='card-img-top' id ="16" alt='' type='Dinner'>
                   <div class='card-body'>
                       <h5 class='card-title'>Oysters</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 50</p>
-                          <button onclick='addToCart(16)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>50</p> </p>
+                          <button onclick='addToCart("16")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Pea,Pecorino Frittata.png' class='card-img-top' alt='' type='Breakfast'>
+              <img src='./assets/img/shopping/Pea,Pecorino Frittata.png' class='card-img-top' id ="17" alt='' type='Breakfast'>
                   <div class='card-body'>
                       <h5 class='card-title'>Pea,Pecorino Frittata</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 24</p>
-                          <button onclick='addToCart(17)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>24</p> </p>
+                          <button onclick='addToCart("17")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Pork Dumplings.jpg' class='card-img-top' alt='' type='Lunch'>
+              <img src='./assets/img/shopping/Pork Dumplings.jpg' class='card-img-top' id ="18" alt='' type='Lunch'>
                   <div class='card-body'>
                       <h5 class='card-title'>Pork Dumplings</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 44</p>
-                          <button onclick='addToCart(18)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>44</p> </p>
+                          <button onclick='addToCart("18")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Ricotta Hotcakes.jpg' class='card-img-top' alt='' type='Breakfast'>
+              <img src='./assets/img/shopping/Ricotta Hotcakes.jpg' class='card-img-top' id ="19" alt='' type='Breakfast'>
                   <div class='card-body'>
                       <h5 class='card-title'>Ricotta Hotcakes</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 19</p>
-                          <button onclick='addToCart(19)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>19</p> </p>
+                          <button onclick='addToCart("19")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Roll Salmon Eggs.jpg' class='card-img-top' alt='' type='Stater'>
+              <img src='./assets/img/shopping/Roll Salmon Eggs.jpg' class='card-img-top' id ="20" alt='' type='Stater'>
                   <div class='card-body'>
                       <h5 class='card-title'>Roll Salmon Eggs</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 25</p>
-                          <button onclick='addToCart(20)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>25</p> </p>
+                          <button onclick='addToCart("20")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Sallad.jpg' class='card-img-top' alt='' type='Stater'>
+              <img src='./assets/img/shopping/Sallad.jpg' class='card-img-top' id ="21" alt='' type='Stater'>
                   <div class='card-body'>
                       <h5 class='card-title'>Sallad</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 5</p>
-                          <button onclick='addToCart(21)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>5</p> </p>
+                          <button onclick='addToCart("21")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Shrimp Cocktail.png' class='card-img-top' alt='' type='Stater'>
+              <img src='./assets/img/shopping/Shrimp Cocktail.png' class='card-img-top'  id ="22" alt='' type='Stater'>
                   <div class='card-body'>
                       <h5 class='card-title'>Shrimp Cocktail</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 35</p>
-                          <button onclick='addToCart(22)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>35</p> </p>
+                          <button onclick='addToCart("22")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Sturgeon Eggs Nd Bread.jpg' class='card-img-top' alt='' type='Stater'>
+              <img src='./assets/img/shopping/Sturgeon Eggs Nd Bread.jpg' class='card-img-top' id ="23" alt='' type='Stater'>
                   <div class='card-body'>
                       <h5 class='card-title'>Sturgeon Eggs Nd Bread</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 18</p>
-                          <button onclick='addToCart(23)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>18</p> </p>
+                          <button onclick='addToCart("23")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>
           </div>
-          <div class='col-2'>
+          <div class='col-6 col-sm-6 col-md-4 col-lg-3'>
             <div class='card'>
-              <img src='./assets/img/shopping/Supper Burgers.png' class='card-img-top' alt='' type='Lunch'>
+              <img src='./assets/img/shopping/Supper Burgers.png' class='card-img-top' id ="24" alt='' type='Lunch'>
                   <div class='card-body'>
                       <h5 class='card-title'>Supper Burgers</h5>
                       <div class='d-flex'>
-                          <p class= 'card-text'>$ 42</p>
-                          <button onclick='addToCart(24)' class='btn btn-primary'>Add to cart</button>
+                      <p>$<p class= 'card-text'>42</p> </p>
+                          <button onclick='addToCart("24")' class='btn btn-primary'>Add to cart</button>
                       </div>
                   </div>
             </div>

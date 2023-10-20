@@ -191,6 +191,7 @@
     flex-wrap: wrap;
     text-align: center;
     height: 450px;
+    margin-bottom: 90px;
   }
   .img-location {
     width: 100%;
@@ -198,11 +199,11 @@
   }
   .div-right {
     width: 100%;
-    margin: 70px 20px 0 30px;
+    margin: 100px auto 0 auto ;
   }
   .div-right input,
   .div-right textarea {
-    width: 100%;
+    width: 95%;
   }
 
   .contact {
@@ -325,53 +326,6 @@
   .chef__content svg {
     display: none;
   }
-
-  .main {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .div-left {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-        height: 450px;
-  }
-  .img-location {
-    width: 100%;
-    margin: 150px 0 30px 0;
-  }
-  .div-right {
-    width: 100%;
-    margin: 70px 10px 0 10px;
-  }
-  .div-right input,
-  .div-right textarea {
-    width: 100%;
-  }
-
-  .contact {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 50px;
-  }
-  .contact .img-first img {
-    top: 30px;
-    left: 20px;
-  }
-  .contact .img-first {
-    top: 30px;
-    left: 20px;
-  }
-  .contact .img-second img {
-    top: 115px;
-    left: 20px;
-  }
-  .contact .img-third img {
-    top: 200px;
-    left: 20px;
-  }
 }
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
@@ -409,6 +363,8 @@
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    height: 450px;
+    margin-bottom: 120px;
   }
   .img-location {
     width: 100%;
@@ -416,11 +372,11 @@
   }
   .div-right {
     width: 100%;
-    margin: 170px 10px 0 10px;
+    margin: 0 auto 0 auto ;
   }
   .div-right input,
   .div-right textarea {
-    width: 100%;
+    width: 95%;
   }
 
   .contact {
@@ -429,11 +385,11 @@
     margin-bottom: 50px;
   }
   .contact .img-first img {
-    top: 30px;
+    top: 40px;
     left: 20px;
   }
   .contact .img-first {
-    top: 30px;
+    top: 40px;
     left: 20px;
   }
   .contact .img-second img {
@@ -488,6 +444,8 @@
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    height: 450px;
+    margin-bottom: 120px;
   }
   .img-location {
     width: 100%;
@@ -495,11 +453,11 @@
   }
   .div-right {
     width: 100%;
-    margin: 170px 10px 0 10px;
+    margin: 0 auto 0 auto ;
   }
   .div-right input,
   .div-right textarea {
-    width: 100%;
+    width: 95%;
   }
 
   .contact {
@@ -508,20 +466,19 @@
     margin-bottom: 50px;
   }
   .contact .img-first img {
-    top: 55px;
+    top: 40px;
     left: 20px;
-    position: relative;
   }
   .contact .img-first {
-    top: 30px;
+    top: 40px;
     left: 20px;
   }
   .contact .img-second img {
-    top: 135px;
+    top: 115px;
     left: 20px;
   }
   .contact .img-third img {
-    top: 220px;
+    top: 200px;
     left: 20px;
   }
 }
@@ -543,5 +500,52 @@
     width: 100%;
     left: -30px;
     margin-left: 0px;
+  }
+  .main {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .div-left {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 450px;
+    margin-bottom: 120px;
+  }
+  .img-location {
+    width: 100%;
+    margin: 150px 0 30px 0;
+  }
+  .div-right {
+    width: 100%;
+    margin: 0 auto 0 auto ;
+  }
+  .div-right input,
+  .div-right textarea {
+    width: 95%;
+  }
+
+  .contact {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+  .contact .img-first img {
+    top: 40px;
+    left: 20px;
+  }
+  .contact .img-first {
+    top: 40px;
+    left: 20px;
+  }
+  .contact .img-second img {
+    top: 115px;
+    left: 20px;
+  }
+  .contact .img-third img {
+    top: 200px;
+    left: 20px;
   }
 }

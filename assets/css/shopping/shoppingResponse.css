@@ -170,11 +170,6 @@
   .control{
     text-align: center;
   }
-  .card-text{
-    margin-left: none;
-    margin-right: 40px;
-  }
-
 
   .footer__logo {
       margin-bottom: 20px;
@@ -196,7 +191,9 @@
   .footer__creation p {
       margin-top: 0;
   }
-
+  .Toast_message{
+    width: 90%;
+  }
 }
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
@@ -308,6 +305,7 @@
     display: flex;
     justify-content: center;
   }
+
 }
 
 /* `lg` applies to medium devices (tablets, less than 992px) */

@@ -124,11 +124,12 @@ body{
   font-size: 30px/40px;
 }
 .card button{
-  width: 60%;
+  width: 50%;
 }
 .card-text{
   margin-left: none;
-  margin-right: 80px;
+  width: 40%;
+  margin-right: 20px;
 }
 .card button{
   margin-top: -5px;
@@ -201,6 +202,42 @@ body{
   height: 40px;
 }
 
+/*message*/
+.Toast_message{
+  position: fixed;
+  top:130px;
+  right: 0;
+  width: 40%;
+}
+.message{
+  display: flex;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 20px;
+  border-left: 2px solid;
+  color: #111114;
+  margin-top: 20px;
+  align-items:center;
+  margin: 10px auto;
+}
+.message__check{
+  font-size: 16px;
+}
+.success{
+  border-left: 5px solid #73fb18;
+}
+.warning{
+  border-left: 5px solid #f71d32;
+}
+.message__title{
+  font: 400 16px/26px  "Plus Jakarta Sans", sans-seril;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+.message__exit button{
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 1);
+}
 /*footer*/
 footer {
     padding: 150px 0 41px 0;

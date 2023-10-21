@@ -57,24 +57,66 @@ function addToCart(value) {
     let checkProduct = productInCart.some(value => value.id === idCard);
 
     if (!checkProduct) {
+        // tìm kiếm - nếu chưa có gán số lần xuất hiện là 1 
       let product = products.find(value => value.id === idCard);
       productInCart.unshift({
         ...product,
         quantity: 1
       });
+
+      // hiện thông báo 
+      let message = ``;
+      message += `<div class="message success">
+        <div class="message__check">
+          <i class="fa-sharp fa-solid fa-circle-check fa-2xl" style="color: #73fb18;"></i>
+        </div>
+        <p class="message__title">The product has been added to cart</p>
+        <div class="message__exit">
+          <button>
+          <i class="fa-solid fa-xmark fa-2xl" style="color: #9ca7ba;"></i>
+        </button>
+        </div>
+      </div>`
+    document.querySelector('.Toast_message').innerHTML = message
     } 
     else {
+        // tìm kiếm - nếu đã có tăng số lần xuất hiện
       let getIndex = productInCart.findIndex(value => value.id === idCard);
       let product = productInCart.find(value => value.id === idCard);
       productInCart[getIndex] = {
         ...product,
         quantity: ++product.quantity
       };
+      
+      let message =``
+      message +=`<div class="message warning">
+        <div class="message__check">
+          <i class="fa-solid fa-bug fa-2xl" style="color: #f71d32;"></i>
+        </div>
+        <p class="message__title">The product already exists int the shopping cart</p>
+        <div class="message__exit">
+          <button>
+          <i class="fa-solid fa-xmark fa-2xl" style="color: #9ca7ba;"></i>
+          </button>
+        </div>
+      </div>  `
+    document.querySelector('.Toast_message').innerHTML = message
     }
     localStorage.setItem('products', JSON.stringify(productInCart));
     calculatorTotal()
+    messages()
   }
 
+  // xóa thông báo
+function messages(){
+    let message_btn = document.querySelectorAll('.message__exit button')
+    let message = document.querySelectorAll('.message')
+    for(let i=0;i<message_btn.length;i++){
+        message_btn[i].addEventListener('click',function(){
+            message[i].classList.add('hide')
+        })
+    }
+}
 // số sản phẩm có trong giỏ hàng 
 function calculatorTotal(){
     document.getElementById('quantity').innerHTML=productInCart.length
@@ -186,3 +228,4 @@ searchInput.addEventListener('keyup',function(e){
         else item.parentElement.classList.add('hide')
     })
 })
+

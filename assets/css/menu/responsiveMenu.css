@@ -222,7 +222,7 @@
         }
 }
 /* `xxl` applies to x-large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) {
+@media (max-width:1399.98px) {
     /* breakfast */
     .col-lg-4{
     width: 100%;
@@ -237,3 +237,10 @@
         left: -50px;
     }
 }
+
+@media (min-width: 1400px) {
+    .breakfast .col-lg-4{
+    width: 100%;
+    padding:0 10px ;
+    }
+} 

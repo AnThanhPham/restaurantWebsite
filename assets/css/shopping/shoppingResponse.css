@@ -376,6 +376,9 @@
     display: flex;
     justify-content: center;
   }
+  #myInput{
+    color: rgba(255, 255, 255, 1);
+  }
   .Toast_message{
     top:40px;
   }

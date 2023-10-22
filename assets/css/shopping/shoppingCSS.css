@@ -153,10 +153,11 @@ body{
   margin-left:-40px;
   
 }
-.card-space img{
+.card-space svg{
   object-fit: cover;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
 }
 .card-space span{
   color: rgba(255, 255, 255, 1);

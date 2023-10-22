@@ -103,71 +103,76 @@ main{
   margin-top: -30px;
   font: 500 24px/34px 'Libre Bodoni', serif;
 }
-/*footer*/
+/* Footer */
+
 footer {
-    padding: 150px 0 41px 0;
-  }
-  
-  .footer__logo p,
-  .footer__creation p {
-    margin-top: 76px;
-    max-width: 211px;
-    line-height: 1.625;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  .footer__logo .trademark,
-  .footer__creation .trademark {
-    margin-top: 18px;
-    display: flex;
-    gap: 18px;
-  }
-  
-  .footer__logo .trademark img,
-  .footer__creation .trademark img {
-    max-width: 121.6px;
-    height: 36px;
-    object-fit: cover;
-  }
-  
-  footer h5 {
-    font-size: 2rem;
-    color: #fff;
-    font-weight: 500;
-    line-height: 1.3;
-  }
-  
-  footer ul {
-    margin-top: 24px;
-  }
-  
-  footer ul li {
-    list-style: none;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.625; /* 162.5% */
-    display: block;
-    margin-bottom: 16px;
-  }
-  
-  footer ul li:hover,
-  footer ul li a:hover {
-    color: #fb8f2c;
-  }
-  
-  .footer__contact-info ul li a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-  }
-  
-  .footer__follow-us li a {
-    display: inline-block;
-    padding-bottom: 2px;
-    border-bottom: 1px solid #ccc;
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-  }
-  
-  .footer__creation {
-    display: none;
-  }
-  
+  background-color: #111114;
+  padding: 150px 0 41px 0;
+}
+
+.footer__logo p,.footer__creation p {
+  margin-top: 76px;
+  max-width: 211px;
+  line-height: 1.625;
+  color: rgba(255, 255, 255, 0.80);
+}
+
+.footer__logo .trademark,.footer__creation .trademark{
+  margin-top: 18px;
+  display: flex;
+  gap: 18px;
+}
+
+.footer__logo .trademark img,.footer__creation .trademark img{
+  max-width: 121.6px;
+  height: 36px;
+  object-fit: cover;
+}
+
+footer h5 {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+footer ul {
+  margin-top: 24px;
+}
+
+footer ul li {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.625; /* 162.5% */
+  display: block;
+  margin-bottom: 16px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: linear 0.3s;
+}
+
+footer ul li:hover,footer ul li a:hover {
+  color: #FB8F2C;
+}
+
+.footer__contact-info ul li a {
+  color: rgba(255, 255, 255, 0.80);
+  text-decoration: none;
+}
+
+
+.footer__follow-us li a{
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #ccc;
+  color: rgba(255, 255, 255, 0.80);
+  text-decoration: none;
+}
+
+.footer__creation {
+  display: none;
+}
+

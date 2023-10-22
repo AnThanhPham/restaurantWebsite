@@ -205,9 +205,9 @@ body{
 /*message*/
 .Toast_message{
   position: fixed;
-  top:130px;
-  right: 0;
-  width: 40%;
+  top:200px;
+  right: 30px;
+  width: 30%;
 }
 .message{
   display: flex;
@@ -218,7 +218,29 @@ body{
   margin-top: 20px;
   align-items:center;
   margin: 10px auto;
+
+  /* hiệu ứng xuất hiện - 0.3s và mất đi trong 1s - thời gian mờ 3s*/
+  animation: slideInLeft ease .3s, fadeOut linear 1s 3s forwards; 
 }
+/*animation - cho nó chạy từ phải sang trái*/
+@keyframes slideInLeft{
+  from{
+      /*đẩy thông báo ra đằng sau bên phải*/
+    transform: translateX(calc(100% + 30px));
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut{
+  to{
+    opacity: 0;
+  }
+}
+
 .message__check{
   font-size: 16px;
 }
@@ -238,6 +260,8 @@ body{
   border: none;
   background-color: rgba(255, 255, 255, 1);
 }
+
+
 /*footer*/
 footer {
     padding: 150px 0 41px 0;

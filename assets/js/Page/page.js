@@ -1,6 +1,16 @@
+// main
+let menuNav = document.querySelector("#menu-nav")
+let menuMobile = document.querySelector("#navbar-mobile")
+
+
+menuNav.onclick = function(){
+    menuMobile.classList.toggle("appear")
+}
+
+
 var days = 0;
-var hours = 0;
-var minutes = 0;
+var hours = 1;
+var minutes = 1;
 var seconds = 12;
 
 var time = setInterval(() => {
@@ -15,7 +25,7 @@ var time = setInterval(() => {
         }
         // day != 0 && hours!=0 minutes !==0 seconds =0
         else {
-          seconds = 60;
+          seconds = 59;
           minutes--;
         }
       }
@@ -28,8 +38,8 @@ var time = setInterval(() => {
         // day != 0 && hours!=0 minutes ==0 seconds =0
         else {
           hours--;
-          seconds = 60;
-          minutes = 60;
+          seconds = 59;
+          minutes = 59;
         }
       }
     }
@@ -40,15 +50,15 @@ var time = setInterval(() => {
         if (seconds !== 0) {
           seconds--;
         } else {
-          seconds = 60;
+          seconds = 59;
           minutes--;
         }
       } else {
         if (seconds === 0) {
           seconds--;
         } else {
-          seconds = 60;
-          minutes = 60;
+          seconds = 59;
+          minutes = 59;
           hours = 23;
           days--;
         }
@@ -62,7 +72,7 @@ var time = setInterval(() => {
         if (seconds !== 0) {
           seconds--;
         } else {
-          seconds = 60;
+          seconds = 59;
           minutes--;
         }
       } else {
@@ -70,8 +80,8 @@ var time = setInterval(() => {
         if (seconds !== 0) {
           seconds--;
         } else {
-          seconds = 60;
-          minutes = 60;
+          seconds = 59;
+          minutes = 59;
           hours--;
         }
       }
@@ -82,7 +92,7 @@ var time = setInterval(() => {
         if (seconds !== 0) {
           seconds--;
         } else {
-          seconds = 60;
+          seconds = 59;
           minutes--;
         }
       } else {

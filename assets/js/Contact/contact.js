@@ -1,77 +1,64 @@
+const namee = document.querySelector(".name");
+const emaill = document.querySelector(".email");
+const textareaa = document.querySelector("textarea");
+const formm = document.querySelector("form");
 
-var namee = document.querySelector(".name");
-var emaill = document.querySelector(".email");
-var textareaa = document.querySelector("textarea");
-var formm = document.querySelector('form')
+const showError = (input, message) => {
+  input.parentElement.classList.add("error");
+  input.parentElement.querySelector("small").innerText = message;
+};
 
-// khi bị lối nhập 
-function showError(input,message){
-  //input.value = input.value.trim()
-  let parent = input.parentElement;
-  let small = parent.querySelector('small')
+const showSuccess = (input) => {
+  input.parentElement.classList.remove("error");
+  input.parentElement.querySelector("small").innerText = "";
+};
 
-  //thêm class error
-  parent.classList.add('error')
-  small.innerText = message
-}
-
-// khi nhập vào
-function showSuccess(input){
-  let parent = input.parentElement;
-  let small = parent.querySelector('small')
-
-  //xóa class error
-  parent.classList.remove('error')
-  small.innerText =``
-}
-
-// check rỗng
-function checkEmpty(listInput){
+const checkEmpty = (listInput) => {
   let isEmptyError = false;
-  // duyệt từng phần tử
-  listInput.forEach(input => {
-    // xóa khoảng trắng
-    input.value = input.value.trim()
 
-    // nếu k có thông tin
-    if(!input.value){
+  listInput.forEach((input) => {
+    input.value = input.value.trim();
+
+    if (!input.value) {
       isEmptyError = true;
-      showError(input,"cannot be blank")
+      showError(input, "Cannot be blank");
+    } else {
+      showSuccess(input);
     }
-    else showSuccess(input)
   });
 
-  return isEmptyError
-}
+  return isEmptyError;
+};
 
-// dùng regex check email
-function checkEmail(input){
+const checkEmail = (input) => {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  input.value = input.value.trim()
+  input.value = input.value.trim();
 
-  // đặt biến 
-  let isEmailError = !emailRegex.test(input.value)
-  // kiểm tra email xem bị lỗi không
-  if(emailRegex.test(input.value)){
-    showSuccess(input)
+  let isEmailError = !emailRegex.test(input.value);
+
+  if (emailRegex.test(input.value)) {
+    showSuccess(input);
+  } else {
+    showError(input, "Email Invalid");
   }
-  else showError(input,"Email Invalid")
 
-  return isEmailError
-}
+  return isEmailError;
+};
 
-// khi ấn button
-formm.addEventListener('submit',function(e){
-  // click vào sẽ k bị lỗi trang
-  e.preventDefault()
+formm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-  let isEmptyError = checkEmpty([namee,emaill,textareaa])
-  let isEmailError = checkEmail(emaill)
+  const isEmptyError = checkEmpty([namee, emaill, textareaa]);
+  const isEmailError = checkEmail(emaill);
 
-  if(!isEmailError && !isEmptyError){
-    alert(`Your response has been sent`)
+  if (!isEmailError && !isEmptyError) {
+    alert(`Your response has been sent`);
     namee.value=``
     emaill.value=``
-    textareaa.value= ``
+    textareaa.value=``
   }
-})
+});
+
+namee.addEventListener("input", () => showSuccess(namee));
+emaill.addEventListener("input", () => showSuccess(emaill));
+textareaa.addEventListener("input", () => showSuccess(textareaa));

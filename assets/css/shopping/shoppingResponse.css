@@ -192,7 +192,19 @@
       margin-top: 0;
   }
   .Toast_message{
-    width: 90%;
+    width: 60%;
+    top:40px;
+  }
+  .message{
+    padding: 10px;
+    align-items:center;
+    margin: 40px auto;
+  }
+  .message__check{
+    font-size: 10px;
+  }
+  .message__title{
+    font: 200 13px/18px  "Plus Jakarta Sans", sans-seril;
   }
 }
 
@@ -305,7 +317,22 @@
     display: flex;
     justify-content: center;
   }
-
+  
+  .Toast_message{
+    width: 60%;
+    top:40px;
+  }
+  .message{
+    padding: 10px;
+    align-items:center;
+    margin: 40px auto;
+  }
+  .message__check{
+    font-size: 10px;
+  }
+  .message__title{
+    font: 200 13px/18px  "Plus Jakarta Sans", sans-seril;
+  }
 }
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
@@ -348,6 +375,20 @@
   .search-shopping{
     display: flex;
     justify-content: center;
+  }
+  .Toast_message{
+    top:40px;
+  }
+  .message{
+    padding: 10px;
+    align-items:center;
+    margin: 40px auto;
+  }
+  .message__check{
+    font-size: 10px;
+  }
+  .message__title{
+    font: 200 13px/18px  "Plus Jakarta Sans", sans-seril;
   }
 }
 

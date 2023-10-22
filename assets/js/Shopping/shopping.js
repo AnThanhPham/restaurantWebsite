@@ -105,6 +105,7 @@ function addToCart(value) {
     localStorage.setItem('products', JSON.stringify(productInCart));
     calculatorTotal()
     messages()
+    calculatorTotal()
   }
 
   // xóa thông báo
@@ -121,7 +122,7 @@ function messages(){
 function calculatorTotal(){
     document.getElementById('quantity').innerHTML=productInCart.length
 }
-calculatorTotal()
+
 // in ra sản phẩm trong giỏ hàng
 function renderProductsCart(){
     let data = ``
@@ -194,6 +195,7 @@ function sumPrice(){
             sum+=productInCart[i].quantity * productInCart[i].price;
         document.getElementById('total-money').innerHTML=sum;
     }
+    else document.getElementById('total-money').innerHTML= `0`
 }
 function cartLoadPage(){
     renderProductsCart();

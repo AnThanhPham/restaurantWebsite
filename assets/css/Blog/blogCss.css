@@ -331,6 +331,17 @@ a.content-new-rm:hover {
     transition: background-color 0.3s, border-radius 0.3s;
 }
 
+
+
+.page__sma4,
+.page__sma5,
+.page__sma6,
+.page__sma7 {
+    display: none;
+}
+
+
+
 ul.page-number-list-container {
     color: #fff;
 }

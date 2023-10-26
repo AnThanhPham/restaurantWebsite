@@ -1,22 +1,82 @@
 let currentPage = 1;
 
-function nextPage() {
+function nextPage() { // nut next
     // Ẩn trang hiện tại
     document.getElementById(`page${currentPage}`).style.display = 'none';
 
     // Tăng số trang hiện tại
     currentPage++;
+    if(currentPage > 3) {
+        document.querySelector('.page__sma1').style.display = 'none';
+        document.querySelector('.page__sma2').style.display = 'none';
+        document.querySelector('.page__sma3').style.display = 'none';
+        document.querySelector('.page__sma4').style.display = 'block';
+        document.querySelector('.page__sma5').style.display = 'block';
+        document.querySelector('.page__sma6').style.display = 'block';
+    }
 
+    if(currentPage > 6) {
+        document.querySelector('.page__sma4').style.display = 'none';
+        document.querySelector('.page__sma5').style.display = 'none';
+        document.querySelector('.page__sma6').style.display = 'none';
+        document.querySelector('.page__sma7').style.display = 'block';
+    }
     // Nếu đã hết trang, quay lại trang đầu tiên
     if (currentPage > 7) {
         currentPage = 1;
+    }
+
+    if(currentPage == 1) {
+        document.querySelector('.page__sma1').style.display = 'block';
+        document.querySelector('.page__sma2').style.display = 'block';
+        document.querySelector('.page__sma3').style.display = 'block';
+        document.querySelector('.page__sma7').style.display = 'none';
     }
 
     // Hiển thị trang mới
     document.getElementById(`page${currentPage}`).style.display = 'block';
 }
 
-function numberPage(number) {
+function prePage() {  // Nut previous
+    // Ẩn trang hiện tại
+    document.getElementById(`page${currentPage}`).style.display = 'none';
+
+    // Giam số trang hiện tại
+    currentPage--;
+
+    // Nếu trang nho hon 1, quay lại trang cuoi cung
+    if (currentPage < 1) {
+        currentPage = 7;
+    }
+
+    if(currentPage == 7) {
+        document.querySelector('.page__sma7').style.display = 'block';
+        document.querySelector('.page__sma1').style.display = 'none';
+        document.querySelector('.page__sma2').style.display = 'none';
+        document.querySelector('.page__sma3').style.display = 'none';
+    }
+
+    if(currentPage < 7) {
+        document.querySelector('.page__sma7').style.display = 'none';
+        document.querySelector('.page__sma4').style.display = 'block';
+        document.querySelector('.page__sma5').style.display = 'block';
+        document.querySelector('.page__sma6').style.display = 'block';
+    }
+
+    if(currentPage < 4) {
+        document.querySelector('.page__sma1').style.display = 'block';
+        document.querySelector('.page__sma2').style.display = 'block';
+        document.querySelector('.page__sma3').style.display = 'block';
+        document.querySelector('.page__sma4').style.display = 'none';
+        document.querySelector('.page__sma5').style.display = 'none';
+        document.querySelector('.page__sma6').style.display = 'none';
+    }
+
+    // Hiển thị trang mới
+    document.getElementById(`page${currentPage}`).style.display = 'block';
+}
+
+function numberPage(number) { // nhấn vào các trang
     // Ẩn tất cả các trang
     document.getElementById(`page${currentPage}`).style.display = 'none';
     // Hiển thị trang được chọn
@@ -30,27 +90,6 @@ function numberPage(number) {
     selectedPage.classList.add('active');
 
     currentPage = number;
-}
-
-// function revealPage(number) {
-    
-// }
-
-
-function prePage() {
-    // Ẩn trang hiện tại
-    document.getElementById(`page${currentPage}`).style.display = 'none';
-
-    // Giam số trang hiện tại
-    currentPage--;
-
-    // Nếu trang nho hon 1, quay lại trang cuoi cung
-    if (currentPage < 1) {
-        currentPage = 7;
-    }
-
-    // Hiển thị trang mới
-    document.getElementById(`page${currentPage}`).style.display = 'block';
 }
 
 // Number page pagination

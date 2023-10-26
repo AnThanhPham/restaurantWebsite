@@ -216,8 +216,8 @@
         line-height: 1.625; /* 162.5% */
     }
     
-    .page-number-num {
-        margin-left: 40px;
+    .page-number-num { 
+        margin-left: 20px;
     }
 
     .page-number-list-container-sm li > a:hover

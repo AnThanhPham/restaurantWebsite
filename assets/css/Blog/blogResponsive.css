@@ -42,6 +42,10 @@
     .menu__list__item-about h4 {
         max-width: 168px;
     }
+
+    .page-subcribe-heading h2 {
+        font-size: 5.4rem;
+    }
 }
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
@@ -77,6 +81,10 @@
 
     .navbar-item__mobile:hover {
         background-color: #ccc;
+    }
+
+    .page-subcribe-img img {
+        height: unset;
     }
 }
 

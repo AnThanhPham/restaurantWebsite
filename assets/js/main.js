@@ -33,3 +33,8 @@ function filterProduct(element){
         }
     })
 }
+
+
+function developing(){
+    alert("Dự án đang phát triển tính năng này")
+}
